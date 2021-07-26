@@ -27,17 +27,17 @@ async def start(bot, update):
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
-                text="<b>🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭.\n\nനിങ്ങൾക്ക് മൂവീസ് വേണോ? എങ്കിൽ തായെ കാണുന്ന ഞങ്ങളുടെ മെയിൻ ചാനലിൽ ജോയിൻ ചെയ്യുക.😂\nഎന്നിട്ട് ഗ്രൂപ്പിൽ പോയി വീണ്ടും മൂവിയിൽ ക്ലിക് ചെയ്ത് start കൊടുത്തു നോക്കൂ..!😁</b>",
+                text="<b>🔊 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 🤭.\n\Hi! To Get Movie Files 💢 Join Our Main Channel💢  Using The Button Below And Again Go to Group And Start The Bot..!😁</b>",
                 reply_markup=InlineKeyboardMarkup([
                     [ InlineKeyboardButton(text=" 💢 𝙹𝚘𝚒𝚗 𝙼𝚢 𝚄𝚙𝚍𝚊𝚝𝚎𝚜 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 💢 ", url=f"https://t.me/{UPDATE_CHANNEL}")]
               ])
             )
             return
         except Exception:
-            await update.reply_text(f"<b>This bot should be the admin on your update channel</b>\n\n<b>💢 ഈ ചാനലിൽ  @{UPDATE_CHANNEL} ബോട്ടിനെ അഡ്മിൻ ആക്. എന്നിട്ട് /start കൊടുക്</b>\n\n<b>🗣️ any Doubt @Mo_Tech_Group</b>")
+            await update.reply_text(f"<b>This bot should be the admin on your update channel</b>\n\n<b>💢 in channel @{UPDATE_CHANNEL} as admin and then /start again</b>\n\n<b>🗣️ any Doubt @Mo_Tech_Group</b>")
             return  
     try:
-        file_uid = update.command[1]
+        file_uid = update.command[1] 
     except IndexError:
         file_uid = False
     
@@ -54,7 +54,7 @@ async def start(bot, update):
             await bot.send_document(
                 chat_id=update.chat.id,
                 document = file_id,
-                caption = caption,
+                caption = f"{file_name} \n @TeamMW_Officials",
                 parse_mode="html",
                 reply_to_message_id=update.message_id,
                 reply_markup=InlineKeyboardMarkup(
@@ -62,13 +62,13 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔔Join Main Channel🔔', url=f"{MT_CHANNEL}"
+                                    '🔔Join Main Channel🔔', url=f"https://t.me/TeamMW_Officials"
                                 )
                         ],
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔊 Bot Updates 🔊', url=f"{MT_BOT_UPDATES}"
+                                    '🔊 Bot Updates 🔊', url="https://t.me/TeamMW_Group"
                                 )
                         ]
                     ]
@@ -119,11 +119,11 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/{MRK_YT_MASTER}'),
+        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/{⚡ㄒ卄乇 千ㄥ卂丂卄⚡}'),
         InlineKeyboardButton('Help 🤔', callback_data="help")
     ],[
-        InlineKeyboardButton('🗣️Group', url=f'{MT_GROUP}'),
-        InlineKeyboardButton('Channel🔊', url=f'{MT_CHANNEL}')
+        InlineKeyboardButton('🗣️Group', url=f'{TeamMW_Group}'),
+        InlineKeyboardButton('Channel🔊', url=f'{@TeamMW_Officials}')
     ],[
         InlineKeyboardButton('🖥️ Tutorial Video 🖥️', url='https://youtu.be/OTqZmADyOjU')
     ]]
@@ -164,10 +164,10 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('👤 Mrk YT👤', url='https://t.me/MRK_YT'),
-        InlineKeyboardButton('Skp KP👤', url='https://t.me/Skp_Kp')
+        InlineKeyboardButton('👤 TeamMW_Officials👤', url='https://t.me/TeamMW_Officials'),
+        InlineKeyboardButton('👤 TeamMW_Group', url='https://t.me/TeamMW_Group')
     ],[
-        InlineKeyboardButton('👤 AlbertEinstein 👤', url='https://t.me/AlbertEinsteinTG')
+        InlineKeyboardButton('👤 ⚡ㄒ卄乇 千ㄥ卂丂卄⚡ 👤', url='https://t.me/suhasfanofsuperstar')
     ],[
         InlineKeyboardButton('🏠 Home', callback_data='start'),
         InlineKeyboardButton('Close 🔐', callback_data='close')
