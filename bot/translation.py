@@ -12,7 +12,7 @@ class Translation(object):
 
 <b>⭐join my group @TeamMW_Group⭐</b>
 
-<b>❤️Join my channel @TeamMW_Official ❤️</b>
+<b>❤️Join my channel @TeamMW_Officials ❤️</b>
 
 <b>Press /help to know about available commands🤪</b>"""    
     
