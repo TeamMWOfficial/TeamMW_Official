@@ -123,7 +123,7 @@ async def start(bot, update):
         InlineKeyboardButton('Help 🤔', callback_data="help")
     ],[
         InlineKeyboardButton('🗣️Group', url=f'{TeamMW_Group}'),
-        InlineKeyboardButton('Channel🔊', url=f'{@TeamMW_Officials}')
+        InlineKeyboardButton('Channel🔊', url=f'{TeamMW_Officials}')
     ],[
         InlineKeyboardButton('🖥️ Tutorial Video 🖥️', url='https://youtu.be/OTqZmADyOjU')
     ]]
