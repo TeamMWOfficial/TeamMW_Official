@@ -119,7 +119,7 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/{⚡ㄒ卄乇 千ㄥ卂丂卄⚡}'),
+        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/{suhasfanofsuperstar}'),
         InlineKeyboardButton('Help 🤔', callback_data="help")
     ],[
         InlineKeyboardButton('🗣️Group', url=f'{TeamMW_Group}'),
@@ -165,9 +165,8 @@ async def about(bot, update):
     
     buttons = [[
         InlineKeyboardButton('👤 TeamMW_Officials👤', url='https://t.me/TeamMW_Officials'),
-        InlineKeyboardButton('👤 TeamMW_Group', url='https://t.me/TeamMW_Group')
-    ],[
-        InlineKeyboardButton('👤 ⚡ㄒ卄乇 千ㄥ卂丂卄⚡ 👤', url='https://t.me/suhasfanofsuperstar')
+        InlineKeyboardButton('👤 TeamMW_Group', url='https://t.me/TeamMW_Group'),
+        InlineKeyboardButton('👤 ㄒ卄乇 千ㄥ卂丂卄 👤', url='https://t.me/suhasfanofsuperstar')
     ],[
         InlineKeyboardButton('🏠 Home', callback_data='start'),
         InlineKeyboardButton('Close 🔐', callback_data='close')
